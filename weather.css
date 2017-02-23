@@ -1,0 +1,22 @@
+body {
+    padding: 30px 0;
+}
+
+/* One city */
+.city-weather {
+    margin-bottom: 80px;
+}
+
+
+/* Multi-city */
+.weather-table-giphy-image {
+    width: 80px;
+}
+
+.progress-add-city {
+    margin-bottom: 60px;
+}
+
+#progress-metre {
+    width: 10px;
+}

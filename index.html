@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather app with Giphy</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="weather.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Weather app</h1>
+                <p>
+                    Check out the weather below.
+                </p>
+            </div>
+
+            <!-- Tabbed navigation -->
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a data-toggle="tab" href="#one-city">One City</a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#multiple-cities">Multiple Cities</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- Tab One City -->
+                <div class="tab-pane fade in active" id="one-city">
+                    <!-- One city -->
+                    <div class="page-header">
+                        <h2>One City</h2>
+                    </div>
+
+                    <div class="city-weather" id="city-weather">
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <img width="200" class="js-giphy media-object" alt="giphy" />
+                            </div>
+
+                            <div class="media-body">
+                                <h4 class="media-heading js-city-name"></h4>
+                                <p class="js-weather"></p>
+                                <p>
+                                    <strong>Wind: </strong>
+                                    <span class="js-wind"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Tab Multiple -->
+                <div class="tab-pane fade" id="multiple-cities">
+                    <!-- Multiple cities -->
+                    <div class="page-header">
+                        <h2>Multiple cities</h2>
+                    </div>
+                    <!-- Add city progress bar -->
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="progress progress-add-city">
+                                <div class="progress-bar progress-bar-danger" id="progress-metre">
+                                    <span class="sr-only"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <!-- Weather data table -->
+                        <div class="col-md-8">
+                            <table id="weather-table" class="table weather-table">
+                                <thead>
+                                    <tr>
+                                        <th>City</th>
+                                        <th>Weather</th>
+                                        <th>Giphy</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3">Loading...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Add City -->
+                        <div class="col-md-3 col-md-offset-1">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Add a city</h3>
+                                </div>
+
+                                <div class="panel-body">
+                                    <form id="form-add-city">
+                                        <div class="form-group">
+                                            <label for="city-name">City Name</label>
+                                            <input type="text" class="form-control" id="city-name" />
+                                        </div>
+                                        <input type="submit" value="Submit" class="btn btn-primary" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.tab-content -->
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="weather.js"></script>
+    </body>
+</html>
